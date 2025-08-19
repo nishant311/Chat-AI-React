@@ -1,0 +1,265 @@
+.chat-app {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.chat-list {
+    background-color: #0d111a;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+    row-gap: 1rem;
+    width: 30%;
+}
+
+.chat-list-header {
+    align-items: center;
+    color: #7b8ebc;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.chat-list-header h2 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.chat-list-header i {
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+
+.chat-list-item {
+    align-items: center;
+    background-color: #131927;
+    border-radius: .5rem;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    /* cursor: pointer; */
+    display: flex;
+    height: 6rem;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    width: 100%;
+}
+
+.chat-list-item.active {
+    background: linear-gradient(135deg, #f42f5f, #8e25bf);
+}
+
+.chat-list-item h4 {
+    color: #ddd;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.chat-list-item.active h4 {
+    color: #fff;
+}
+
+.chat-list-item i {
+    color: #f42f5f;
+    /* cursor: pointer; */
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.chat-window {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 70%;
+}
+
+.chat-title {
+    align-items: center;
+    background-color: #0d111a;
+    display: flex;
+    justify-content: space-between;
+    min-height: 8rem;
+    padding-right: 2rem;
+    width: 100%;
+}
+
+.chat-title h3 {
+    color: #fff;
+    font-family: "Exo 2", sans-serif;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+.arrow {
+    color: #7b8ebc;
+    cursor: pointer;
+    font-size: 4rem;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    /* to take the rest available space */
+    flex-grow: 1;
+    padding: 1rem;
+    row-gap: 4rem;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.chat::-webkit-scrollbar {
+    display: none;
+}
+
+.prompt,
+.response {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-size: 1.6rem;
+    /* badi ma 80% width, atena bhani full width */
+    max-width: 80%;
+    padding: 2rem;
+}
+
+.prompt {
+    align-self: flex-end;
+    background: linear-gradient(135deg, #f42f5f, #8e25bf);
+    border-radius: 3rem 0 3rem 3rem;
+    text-align: right;
+}
+
+.response {
+    align-self: flex-start;
+    background: linear-gradient(135deg, #fe8d5c, #fe4d57);
+    border-radius: 0 3rem 3rem 3rem;
+    text-align: left;
+    padding-left: 3rem;
+}
+
+.prompt span,
+.response span {
+    display: block;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+}
+
+.typing {
+    color: #7b8ebc;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.6rem;
+    margin-top: auto;
+    margin-bottom: -3rem;
+}
+
+.msg-form {
+    align-items: center;
+    background-color: #161c2c;
+    box-shadow: 0 -0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    height: 10rem;
+    flex-shrink: 0;
+    padding-right: 5rem;
+    width: 100%;
+    position: relative;
+}
+
+.msg-form i {
+    color: #7b8ebc;
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+
+.emoji {
+    display: flex;
+    justify-content: center;
+    width: 10rem;
+}
+
+.picker {
+    position: absolute;
+    bottom: 7rem;
+    left: 8rem;
+}
+
+.msg-input {
+    background-color: transparent;
+    border: none;
+    color: #7b8ebc;
+    flex-grow: 1;
+    font-size: 1.8rem;
+    height: 100%;
+}
+
+.msg-input::placeholder {
+    color: #7b8ebc;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.msg-input:focus::placeholder {
+    opacity: 0;
+}
+
+
+.chat-title i.bx-menu {
+    display: none;
+}
+
+.close-list {
+    display: none;
+}
+
+
+@media (max-width: 900px) {
+    .chat-app {
+        flex-direction: column;
+    }
+
+    .chat-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        transform: translateX(-100%);
+    }
+
+    .chat-list.show {
+        transform: translateX(0);
+        z-index: 1000;
+    }
+
+    .chat-window {
+        width: 100%;
+    }
+
+    .chat-title h3 {
+        padding-left: 5rem;
+    }
+
+    .chat-title i.bx-menu {
+        font-size: 3rem;
+        color: #fff;
+        display: block;
+        cursor: pointer;
+        position: absolute;
+    }
+
+    .close-list {
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    .chat-list {
+        width: 60%;
+    }
+
+    .picker {
+        left: 1rem;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Include Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <title>AI Chat Bot</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <html>
+      <body>
+        <script src="https://js.puter.com/v2/"></script>
+        <!-- <script>
+          async function getAIResponse() {
+            try {
+              // Call Puter AI
+              const response = await puter.ai.chat(
+                "What are the benefits of exercise?",
+                { model: "gpt-4.1-nano" }
+              );
+
+              // Print nicely using Puter
+              puter.print(response);
+
+              // Optionally, log raw response
+              // console.log(marked.parse(response.message.content));
+              console.log("got it");
+            } catch (err) {
+              console.error("Error calling Puter AI:", err);
+            }
+          }
+
+          // Call the async function
+          getAIResponse();
+        </script> -->
+      </body>
+    </html>
+  </body>
+</html>

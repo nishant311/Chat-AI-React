@@ -1,0 +1,44 @@
+.start-page {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    width: 100%;
+}
+
+
+.start-page-btn {
+    background: linear-gradient(78deg, #f42f5f 0%, #f42f5f 60%, #BC32C3 61%, #BC32C3 100%);
+    border: none;
+    border-radius: 1rem;
+    color: #eee;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 7rem;
+    font-weight: bold;
+    height: 15rem;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.4rem;
+    position: relative;
+    text-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+    width: 35rem;
+    cursor: pointer;
+    /* to support smooth clicking effect */
+    transition: transform 0.1s ease;
+}
+
+.start-page-btn::before {
+    background: white;
+    bottom: 0;
+    content: "";
+    left: 60.5%;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: rotate(169deg);
+    width: 2%;
+}
+
+/* clicking effect */
+.start-page-btn:active {
+    transform: scale(0.98);
+}
