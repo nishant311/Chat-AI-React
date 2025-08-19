@@ -2,6 +2,12 @@
 
 A responsive AI-powered ChatBot built with React. Users can interact with the chatbot for answering questions, generating text, or performing simple tasks.
 
+## Prerequisite
+
+You must **sign in to puter.js** to obtain authentication before using this project.  
+This ensures you have the necessary credentials (API key or token) to access its features.
+[Sign in to puter.js](https://puter.com) to get authentication.
+
 ## Features
 
 - AI-driven responses
